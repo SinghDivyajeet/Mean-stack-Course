@@ -1,0 +1,51 @@
+code editors -> VS code, sublime text, brackets, vim, emacs and alot more. (front-end)
+
+HTML -> hyper text markup language. (used for structering / skeleton)
+
+There are two types of tags:
+1. Opening-closing tags (90%)
+2. Non-closing tags (10%)
+
+<p> ->  paragraph tag Opening tag
+</p> -> paragraph tag Closing tag
+
+<br> ->  break line
+
+<a href, target> -> anchor tag href and target are attributes.
+
+h1,h2,h3,h4,h5,h6 -> heading 
+
+hr -> horizontal line.
+
+img -> for putting images into our file.
+
+four main types of sending data to the server:
+1. get request -> give me data ()
+2. post request -> take data from me.
+3. put request -> take data from me and update if their is no\existing data data (update).
+4. delete request -> delete the data which i am requesting to.
+
+====================================================================================
+
+Terminal command line.
+=> How to open cmd.
+
+1. Desktop -> press shift and right click.
+2. search in windows.
+3. if you are in any folder -> ctrl+L, and then type cmd.
+
+=> Folder Navigation
+to get in -> cd folderName
+to get out -> cd ..
+to clear cmd -> cls(windows) / clear (mac)
+to view all the files -> dir (windows) / ls (mac)
+to delete a file -> rm
+rm -rf -> joke
+
+====================================================================
+
+GIT basics
+git status -> to check the status of folder.
+
+
+git add ->git commit -> git push
