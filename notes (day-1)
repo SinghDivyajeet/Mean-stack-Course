@@ -68,3 +68,9 @@ git commit -> save all the changes.
 git push -u origin master -> push all the code to the github.
 
 git add -> git commit -> git push -u orgin master.
+
+===========================================================================
+
+HOMEWORK (16-Jul)
+1) difference between absolute path and relative path.
+2) what is MIME types.
