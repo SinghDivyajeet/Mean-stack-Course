@@ -25,6 +25,13 @@ four main types of sending data to the server:
 3. put request -> take data from me and update if their is no\existing data data (update).
 4. delete request -> delete the data which i am requesting to.
 
+LIST TYPES
+* Unordered lists
+
+* Ordered List
+
+
+All HTML elements will have these two attributes -> class, id (they are kind of hooks to gather that tag.)
 ====================================================================================
 
 Terminal command line.
@@ -45,7 +52,19 @@ rm -rf -> joke
 ====================================================================
 
 GIT basics
+
+there are 2 things, 1) git, 2) github
+1) git-> it is versioning control system (VCS).
+2) github-> it is website where whole code lives.
+
+USAGE.
+
+we have to download git into our system to use it.
+
 git status -> to check the status of folder.
 
+git add -> start tracking all the files.
+git commit -> save all the changes.
+git push -u origin master -> push all the code to the github.
 
-git add ->git commit -> git push
+git add -> git commit -> git push -u orgin master.
