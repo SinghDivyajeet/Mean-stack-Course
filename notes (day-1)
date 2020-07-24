@@ -32,6 +32,32 @@ LIST TYPES
 
 
 All HTML elements will have these two attributes -> class, id (they are kind of hooks to gather that tag.)
+
+CSS DISPLAY
+
+1) Inline
+2) Block
+3) inline-block (custom DISPLAY Style)
+
+Width and heigth according to screen size.
+1) width -> vw
+2) heigth -> vh
+
+
+HOW TO NAME VARIABLES.
+1) Kebab Case: box-little-goes-here.
+2) Snake Case: box_little_goes_here.
+3) Camel Case: boxLittleGoesHere.
+
+
+FLEX CHEETSHEET
+for row -> justify-content
+for col -> align-content
+
+
+TO SET A LINE FOR ELEMENTS TO HANG ON.
+-> align-items
+
 ====================================================================================
 
 Terminal command line.
