@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+}
 .showData{
     margin: 100px auto 0;
     width: 300px;
@@ -37,4 +40,38 @@
 }
 .lastThird{
     flex-grow: 2;
+}
+.bgImg{
+    /* background-image: url("./header-d47d673672.png"); */
+    width: 100vw;
+    height: 80vh;
+    background-size: contain;
+    /* to strech image and fit it accordingly */
+    background-repeat: no-repeat;
+    /* for not repeating image as a background */
+    background-position: center;
+    /* for positioning image in the center of a div */
+    border: 1px solid black;
+    background-attachment: fixed;
+    /* to make bg image fixed and let others scroll over it. */
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+}   
+
+a h1:hover{
+    color: red;
+}
+a h1:visited{
+    color: green;
+}
+p:nth-of-type(odd){
+    background-color: grey;
+}
+input:focus{
+    background-color: grey;
+}
+p::before{
+    content:"HI"
 }
