@@ -114,7 +114,7 @@ var companyDetails = {
     },
 }
 
-console.log(companyDetails.getDetails());
+// console.log(companyDetails.getDetails());
 
 
 // How to manipulate Strings
@@ -170,6 +170,86 @@ var student = {
 
 // console.log(student.drivesCar)
 
+
+//an array is a collection of homogenous(same) data. -> is strictly typed languages.
+////an array is a collection of hetrogenous(different) data. -> is loosely typed languages.
 // Array
-var num = ["rohan","mohan","rphan2","raghab","sohan",2,3,4,5,6,];
-console.log(num[0])
+var num = ["rohan","mohan","rphan2","raghab","sohan",2,3,4,5,6,]; //right or wrong?
+
+
+//final example
+
+var array = [[1,2,3,['a','b','c']],"string",1,"$","^",'*',null, undefined, true, false,function(){console.log("hi")},student,{name:"divyajeet",age:23}];
+
+
+// console.log(array[0][3][2])
+var marks = [23,34,54,6,7,8,9,76,76,4,53,4,3,4,2,32,5,2];
+
+// console.log(marks[6]);
+
+
+//LOOPS
+
+// for loops
+// while -> homework
+// do..while -> homework
+
+// this is the body for "for loop"
+// for(initialisation;comparision;increament/decreament){
+//     //code
+// }
+
+
+//basic for loops.
+// for(i=2; i<=10; i+=2){
+//     //code
+//     console.log(marks[i]);
+// }
+
+
+//range based for loops.
+// for..of loop -> variable before ...of will be used as whole element.
+// console.log("now i am printing range based loops.")
+// for( x of marks){
+//     console.log(x)
+// }
+
+//for..in loop -> variable before ...in will be used as an index.
+// for(y in marks){
+//     console.log(y)
+// }
+
+// index -> is just a number at which data is present. 0,1,2,...,n.
+// element -> is the data present at index. -> array[0], array[1]....array[Nth].
+
+var sayname =  function(){
+    console.log("Hello Divyajeet")
+}
+var numbers = [5,4,3,2,1];
+
+var len = numbers.length-1;
+// for( i in numbers){
+//     var temp = numbers[i];
+//     numbers[i]=numbers[len];
+//     numbers[len]=temp;
+//     console.log(numbers);
+//     len--;
+// }
+
+
+//This is the code for sorting.
+var halfArray = (numbers.length-1)/2;
+for(i=0; i<halfArray; i++){
+    var temp = numbers[i];
+    numbers[i]=numbers[len];
+    numbers[len]=temp;
+    console.log(numbers);
+    len--;
+}
+//Homework
+
+// 1) write your own code for sorting.
+    // [4,6,7,8,3,4,6,2,1]; -> [1,2,3,4,4,6,6,7,8]
+// 2) Write code to insert something at any location into the array
+    // var numbers = [1,2,3,4] -> 4th location add 5. numbers[4]=5;, add 5 at 2nd location [1,2,5,3,4] 
+// 3) Write code to delete something at any location into the array
