@@ -179,7 +179,7 @@ var num = ["rohan","mohan","rphan2","raghab","sohan",2,3,4,5,6,]; //right or wro
 
 //final example
 
-var array = [[1,2,3,['a','b','c']],"string",1,"$","^",'*',null, undefined, true, false,function(){console.log("hi")},student,{name:"divyajeet",age:23}];
+// var array = [[1,2,3,['a','b','c']],"string",1,"$","^",'*',null, undefined, true, false,function(){console.log("hi")},student,{name:"divyajeet",age:23}];
 
 
 // console.log(array[0][3][2])
@@ -238,14 +238,14 @@ var len = numbers.length-1;
 
 
 //This is the code for sorting.
-var halfArray = (numbers.length-1)/2;
-for(i=0; i<halfArray; i++){
-    var temp = numbers[i];
-    numbers[i]=numbers[len];
-    numbers[len]=temp;
-    console.log(numbers);
-    len--;
-}
+// var halfArray = (numbers.length-1)/2;
+// for(i=0; i<halfArray; i++){
+//     var temp = numbers[i];
+//     numbers[i]=numbers[len];
+//     numbers[len]=temp;
+//     console.log(numbers);
+//     len--;
+// }
 //Homework
 
 // 1) write your own code for sorting.
@@ -253,3 +253,56 @@ for(i=0; i<halfArray; i++){
 // 2) Write code to insert something at any location into the array
     // var numbers = [1,2,3,4] -> 4th location add 5. numbers[4]=5;, add 5 at 2nd location [1,2,5,3,4] 
 // 3) Write code to delete something at any location into the array
+
+
+//Algorithm
+// 1) write pseudo code
+// 2) write code
+
+//how to sort -> minus elements from length.
+var array = [4,6,7,8,3,4,6,2,1];
+// [1,6,7,8,3,4,6,2,4] -> 1st iteration.
+// [1,2,7,8,3,4,6,6,4] -> 2nd iteration.
+// [1,2,3,8,7,4,6,6,4] -> 3rd iteration.
+// [1,2,3,4,7,8,6,6,4] -> 4th iteration.
+// [1,2,3,4,4,8,6,6,7]
+// [1,2,3,4,4,6,8,6,7]
+// [1,2,3,4,4,6,6,8,7]
+// [1,2,3,4,4,6,6,7,8] -> finally sorted.
+// function sortIt(unSortedArray){
+//     for(var i =0; i<unSortedArray.length; i++){
+//         var num = unSortedArray[i]; //-> 4
+//         var minimum = null;
+//         for(var j=i+1; j<unSortedArray.length;j++){
+
+//         }
+//     }
+
+
+
+// }
+
+// sortIt(array);
+
+
+// if(condition){
+//     //code
+// }
+// else if(anotherCondition){
+//     //code
+// }
+// else if(thirdCondition){
+
+// }
+// else{
+//     //code
+// }
+
+//In JS except 0,null, undefined, and empty string everything is true. -> slightly wrong.
+
+if("hi buddy"){
+    console.log("yes divided!!")
+}
+else{
+    console.log("Not Divided");
+}
