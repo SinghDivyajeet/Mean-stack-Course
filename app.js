@@ -260,7 +260,7 @@ var len = numbers.length-1;
 // 2) write code
 
 //how to sort -> minus elements from length.
-var array = [4,6,7,8,3,4,6,2,1];
+
 // [1,6,7,8,3,4,6,2,4] -> 1st iteration.
 // [1,2,7,8,3,4,6,6,4] -> 2nd iteration.
 // [1,2,3,8,7,4,6,6,4] -> 3rd iteration.
@@ -300,9 +300,67 @@ var array = [4,6,7,8,3,4,6,2,1];
 
 //In JS except 0,null, undefined, and empty string everything is true. -> slightly wrong.
 
-if("hi buddy"){
-    console.log("yes divided!!")
+// if("hi buddy"){
+//     console.log("yes divided!!")
+// }
+// else{
+//     console.log("Not Divided");
+// }
+
+//Homework 5th-August *
+
+// 1) study if-else
+// 2) find max and min in an array. 
+
+// WAP for finding max in an array
+
+var array = [4,6,7,8,3,4,6,2,1,9];
+
+function max(array){
+    var maximum = array[0];
+
+    for(var i = 1; i<array.length; i++){
+        if(array[i] > maximum){
+            maximum = array[i];
+        }
+    }
+    return maximum;
 }
-else{
-    console.log("Not Divided");
+
+// console.log( max(array))
+
+// var array = [4,6,7,8,0,3,4,6,2,1,9];
+
+function min(array){
+    var minimum  = array[0];
+
+    for(var i=1; i<array.length; i++){
+        if(array[i] < minimum){
+            minimum = array[i];
+        }
+    }
+    return minimum;
 }
+
+console.log(min(array));
+
+//Homework 6-08-2020
+// 1) print an array from backwards -> [1,2,3,4] -> [4,3,2,1]
+// 2) duplicate an array but reversed. -> [1,2,3,4] -> return a new array [4,3,2,1]
+// 3) arr = [1,2,3,0,4,0,5,0,6,0,2,0] -> move all the 0's in the back
+    // -> return [1,2,3,4,5,6,2,0,0,0,0,0]
+
+function hero(number){
+    return number;
+}
+var returned = hero(6);
+console.log(returned)
+
+
+//Strings
+
+// the best movie i have seen is "The Matrix".
+var bestMovie = "the best movie i have seen is \"The Matrix\"";
+var name = "ab\c\*d";
+console.log(name.length)
+console.log(bestMovie)
