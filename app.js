@@ -314,7 +314,7 @@ var len = numbers.length-1;
 
 // WAP for finding max in an array
 
-var array = [4,6,7,8,3,4,6,2,1,9];
+// var array = [4,6,7,8,3,4,6,2,1,9];
 
 function max(array){
     var maximum = array[0];
@@ -342,7 +342,7 @@ function min(array){
     return minimum;
 }
 
-console.log(min(array));
+// console.log(min(array));
 
 //Homework 6-08-2020
 // 1) print an array from backwards -> [1,2,3,4] -> [4,3,2,1]
@@ -350,17 +350,44 @@ console.log(min(array));
 // 3) arr = [1,2,3,0,4,0,5,0,6,0,2,0] -> move all the 0's in the back
     // -> return [1,2,3,4,5,6,2,0,0,0,0,0]
 
-function hero(number){
-    return number;
-}
-var returned = hero(6);
-console.log(returned)
+// function hero(number){
+//     return number;
+// }
+// var returned = hero(6);
+// console.log(returned)
 
+// for(initialisation; comparision; increament/decreament){
+    
+    
+//     //code
+ 
+
+// }
+
+// 3,5,8
+for(var i=0; i<11; i++){
+    console.log(i);
+    
+    if(i==3 || i==5 || i==8){
+        continue;
+    }
+
+    console.log("printed")
+    
+        
+}
+
+// break;
+
+// continue -> it won't let any of the statement after it, get executed.
+// and it will directly send execution flow to the inc/dec part;
+
+// and-> && ,or-> ||
 
 //Strings
 
 // the best movie i have seen is "The Matrix".
-var bestMovie = "the best movie i have seen is \"The Matrix\"";
-var name = "ab\c\*d";
-console.log(name.length)
-console.log(bestMovie)
+// var bestMovie = "the best movie i have seen is \"The Matrix\"";
+// var name = "ab\c\*d";
+// console.log(name.length)
+// console.log(bestMovie)
