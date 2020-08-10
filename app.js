@@ -364,18 +364,7 @@ function min(array){
 
 // }
 
-// 3,5,8
-for(var i=0; i<11; i++){
-    console.log(i);
-    
-    if(i==3 || i==5 || i==8){
-        continue;
-    }
 
-    console.log("printed")
-    
-        
-}
 
 // break;
 
@@ -391,3 +380,27 @@ for(var i=0; i<11; i++){
 // var name = "ab\c\*d";
 // console.log(name.length)
 // console.log(bestMovie)
+
+var array = [4,6,7,8,3,4,6,2,1,9];
+
+function addOne(arr){
+
+    for(var i=0; i<arr.length; i++){
+        arr[i] = arr[i]+1;
+    }
+    
+}
+
+console.log(array)
+addOne(array)
+console.log(array)
+
+
+var string = "'Paras' is a good guy";
+
+//WAP to extract names from the string (HINT-> names are in single quotes).
+
+var firstSingleQoute = string.indexOf("'");
+var lastSingleQuote = string.lastIndexOf("'");
+var name = string.slice(firstSingleQoute+1,lastSingleQuote);
+console.log(name)
