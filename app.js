@@ -381,26 +381,163 @@ function min(array){
 // console.log(name.length)
 // console.log(bestMovie)
 
-var array = [4,6,7,8,3,4,6,2,1,9];
+// var array = [4,6,7,8,3,4,6,2,1,9];
 
-function addOne(arr){
+// function addOne(arr){
 
-    for(var i=0; i<arr.length; i++){
-        arr[i] = arr[i]+1;
-    }
+//     for(var i=0; i<arr.length; i++){
+//         arr[i] = arr[i]+1;
+//     }
     
-}
+// }
 
-console.log(array)
-addOne(array)
-console.log(array)
+// console.log(array)
+// addOne(array)
+// console.log(array)
 
 
-var string = "'Paras' is a good guy";
+// var string = "'Paras' is a good guy";
 
 //WAP to extract names from the string (HINT-> names are in single quotes).
 
-var firstSingleQoute = string.indexOf("'");
-var lastSingleQuote = string.lastIndexOf("'");
-var name = string.slice(firstSingleQoute+1,lastSingleQuote);
-console.log(name)
+// var firstSingleQoute = string.indexOf("'");
+// var lastSingleQuote = string.lastIndexOf("'");
+// var name = string.slice(firstSingleQoute+1,lastSingleQuote);
+// console.log(name)
+
+var fruits = ['Banana','grape','mango','peach'];
+var numbers = [1,2,3,4,5,6,7]
+
+// toString() -> to join all array elements into a comma seperated string.
+var allFruits = fruits.toString();
+// console.log(allFruits+'-> toString')
+
+// ------------------------------------------------------------------------------------
+
+//join() -> to join all array elements into a "dynamic seprated" fashion.
+
+var allFruitsWithColon = fruits.join("?");
+// console.log(allFruitsWithColon+'-> Join')
+
+// ------------------------------------------------------------------------------------
+
+//pop() -> to delete the last element of the arrray.
+// var lastFruit = fruits.pop();
+// console.log(fruits);
+
+// ------------------------------------------------------------------------------------
+
+//push() -> it will push the new element at the last of the array.
+// var i = 2;
+// fruits.push(fruits[i]);
+// console.log(fruits);
+
+//Opposites:
+// pop() (will function at last) <-> shift() (will function at beginning)
+// push() (will function at last) <-> unshift() (will function at beginning)
+
+// ------------------------------------------------------------------------------------
+
+
+// var fruits = ['Banana','grape','mango','peach'];
+
+// shift() (will function same as pop() but at beginning) 
+fruits.shift();
+// console.log(fruits);
+
+// ------------------------------------------------------------------------------------
+
+// unshift() (will function same as push() but at beginning) 
+
+fruits.unshift("strawberry");
+// console.log(fruits)
+
+fruits[3]="avacado";
+// console.log(fruits)
+
+delete fruits[2];
+// console.log(fruits)
+fruits[2]="Dragon Fruit";
+// console.log(fruits)
+
+// ["strawberry", "grape", "Dragon Fruit", "avacado"]
+
+// fruits.splice(2,2,"mango","kiwi");
+
+// console.log(fruits.slice(1,3));
+
+var string = "a quick brown fox was here";
+var stringToSearch = "FoX";
+
+function search(string, stringToSearch){
+    stringToSearch = stringToSearch.toLowerCase();
+    string = string.toLowerCase();
+
+    var array = string.split(" ");
+    for(var i of array){
+        if(i=== stringToSearch){
+            return "Matched";
+        }
+    }
+    return "Not Matched";
+}
+// console.log(search(string,stringToSearch));
+
+// new Date(year, month, day, hours, minutes, seconds, milliseconds)
+var a = 3/2;
+
+// console.log(Math.round(1.5));
+var min = Math.min(2,3,4,5,6,7,1);
+// console.log(min)
+
+function add(a,b){
+    if(Number.isInteger(a) && Number.isInteger(b)){
+        return a+b;
+    }
+    else{
+        console.log("One of the argument is not number");
+    }
+}
+// console.log(add("string",3));
+
+var string = "a quick brown fox";
+
+function capatalize(string){
+    var array = string.split(" ");
+    // how to change the 0th position -> homework
+    console.log(array[1].charAt(0).toUpperCase()+array[1].substr(1))
+   
+
+}
+
+// capatalize(string)
+
+var remo = "remove_non_ascii('?????PHP-MySQL??????')";
+
+
+// a[i] =  
+
+function remove(a, b) {
+
+    var len = a.length - 1;
+
+    for (var i = 0; i < len; i++) {
+        var value = a[i];
+        if ( value === b) {
+
+            // console.log(a.length);
+
+            a = a.replace(b, "");
+            i--;
+        }
+
+    }
+    return a;
+}
+
+// console.log(remove(remo,"?"));
+
+
+var string = "hi buddy";
+var a=string[0].charCodeAt(0)+1;
+console.log(a);
