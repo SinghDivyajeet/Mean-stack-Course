@@ -1,77 +1,22 @@
-*{
-    box-sizing: border-box;
-}
 body{
     margin: 0;
 }
-.showData{
-    margin: 100px auto 0;
-    width: 300px;
-    height: 80px;
-    background-color: rgb(99, 19, 226);
-}
-.options{
-    margin: 3px;
-    display: flex;
-}
-.option{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: red;
-    font-size: 8px;
-    text-align: center;
-    margin-right:2px;
-}
 .container{
-    margin: 0px auto;
-    width: 300px;
-    background-color: rgb(99, 19, 226);
     display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
+    margin: 100px auto;
+    border: 2px solid black;
+    padding: 50px;
+    width: 70vh;
+    justify-content: space-around;
 }
-.button{
+.box{
     width: 25%;
-    height: 50px;
-    border-bottom: 1px solid black;
-    background-color: blanchedalmond;
+    height: 100px;
+    border: 2px solid black;
+    margin-right: 20px;
     text-align: center;
 }
-.lastThird{
-    flex-grow: 2;
-}
-.bgImg{
-    /* background-image: url("./header-d47d673672.png"); */
-    width: 100vw;
-    height: 80vh;
-    background-size: contain;
-    /* to strech image and fit it accordingly */
-    background-repeat: no-repeat;
-    /* for not repeating image as a background */
-    background-position: center;
-    /* for positioning image in the center of a div */
-    border: 1px solid black;
-    background-attachment: fixed;
-    /* to make bg image fixed and let others scroll over it. */
-    background: #C6FFDD;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(90deg, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    text-align: center;
-}   
-
-a h1:hover{
-    color: red;
-}
-a h1:visited{
-    color: green;
-}
-p:nth-of-type(odd){
-    background-color: grey;
-}
-input:focus{
-    background-color: grey;
-}
-p::before{
-    content:"HI"
+.bgTomato{
+    /* adding this class will change background to tomate */
+    border:2px solid red;
 }

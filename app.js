@@ -537,7 +537,39 @@ function remove(a, b) {
 
 // console.log(remove(remo,"?"));
 
+function changeColor(){
+    var box = document.getElementById('box3');
+    box.style.border="2px solid red";
+}
 
-var string = "hi buddy";
-var a=string[0].charCodeAt(0)+1;
-console.log(a);
+function showMyName(){
+    var field  = document.getElementsByTagName('input');
+    var value = field[0].value;
+    alert(value);
+}
+
+// event handlers === event listeners
+function tellMyName(event){
+    console.log("Box Clicked")
+    event.stopPropagation();
+}
+function tellYourName(){
+    console.log("Container Clicked")
+}
+function bodyClicked(){
+    console.log("Body clicked");
+}
+
+var box1 = document.getElementById('box1');
+var container = document.getElementById('container'); 
+var body = document.body;
+
+box1.addEventListener('click',tellMyName);
+container.addEventListener('click',tellYourName);
+body.addEventListener('click',bodyClicked);
+
+
+// box1.addEventListener('click',function(event){
+//     console.log('box is clicked');
+//     event.stopPropagation();
+// });
