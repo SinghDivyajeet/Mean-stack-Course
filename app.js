@@ -549,27 +549,49 @@ function showMyName(){
 }
 
 // event handlers === event listeners
-function tellMyName(event){
-    console.log("Box Clicked")
-    event.stopPropagation();
-}
-function tellYourName(){
-    console.log("Container Clicked")
-}
-function bodyClicked(){
-    console.log("Body clicked");
-}
+// function tellMyName(event){
+//     console.log("Box Clicked")
+//     // console.log(event)
+//     event.stopPropagation();
+// }
+// function tellYourName(event){
+//     console.log("Container Clicked")
+// }
+// function bodyClicked(event){
+//     console.log("Body clicked");
+// }
 
-var box1 = document.getElementById('box1');
-var container = document.getElementById('container'); 
-var body = document.body;
 
-box1.addEventListener('click',tellMyName);
-container.addEventListener('click',tellYourName);
-body.addEventListener('click',bodyClicked);
+
+// box1.addEventListener('click',tellMyName);
+// container.addEventListener('click',tellYourName);
+// document.body.addEventListener('click',bodyClicked);
 
 
 // box1.addEventListener('click',function(event){
 //     console.log('box is clicked');
 //     event.stopPropagation();
 // });
+
+var box2 = document.getElementById('box2');
+var container = document.getElementById('container'); 
+
+var para = document.createElement("p");
+var text = document.createTextNode("Hi I am dynamically created!");
+para.appendChild(text);
+
+document.body.firstElementChild.insertBefore(para,box2);
+
+box2.remove();
+
+
+
+
+
+
+
+
+
+
+
+
