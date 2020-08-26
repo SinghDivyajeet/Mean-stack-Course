@@ -20,3 +20,7 @@ body{
     /* adding this class will change background to tomate */
     border:2px solid red;
 }
+.timer{
+    margin:auto;
+    text-align: center;
+}

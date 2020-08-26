@@ -584,14 +584,108 @@ document.body.firstElementChild.insertBefore(para,box2);
 
 box2.remove();
 
+//arrow function
+// var add2 = (number)=>number+2;
+
+// var num2 = add2(3);
+// console.log(num2);
 
 
+//TIMING EVENTS
+
+// 1) setInterval(); -> runs repeatedly after a particular interval.
+// 2) setTimeout(); runs once after a particular interval.
+
+function print2(){
+    console.log("Print 2");
+}
+
+// setTimeout( ()=>console.log("Print 2"), 2000);
 
 
+//HOW TO MAKE A COUNTDOWN TIMER
+// var min = 5;
+// var sec = 0;
+// var flag = true;
+
+// var para = document.getElementsByClassName('time');
+// // min =0;
+// var stopID = setInterval(() => {
+//     if(min>0 && sec==0){
+//         min--;
+//         sec=60;
+//     }
+//     else if(min==0 && flag){
+//         //last 60 seconds
+//         flag=false;
+//         sec=60;
+//     }
+//     else if(min==0 && sec==0){
+//         console.log("Counter Done")
+//         alert("Your time is up");
+//         clearInterval(stopID);
+//     }
+//     var time = `${min}:${sec--}`;
+//     para[0].innerHTML = time;
+//     console.log(time)
+// }, 10);
 
 
+// console.log("HI bud");
+// setTimeout(() => {
+//     console.log("Print 2")
+// }, 2000);
+// setTimeout(() => {
+//     console.log("Print 3")
+// }, 2000);
+// console.log("Last part");
 
 
+//Design a system where user downloads a file, then compress it, and finally
+// uploads the file to the server.
+
+function download(url,callback){
+    console.log(`File is being downloaded from ${url}`);
+    var file = url.split("/").pop();
+    setTimeout(()=>{
+        console.log(`${file} Downloaded`);
+        if(typeof callback === 'function')
+            callback(file);
+    },2000)
+
+}
+
+function compress(file,callback){
+    if(file.split(".")[1]!=="zip"){
+        console.log(`${file} is compressing.`);
+        var archive = file.split(".")[0]+".zip";
+        setTimeout(()=>{
+            console.log(`${file} is compressed into ${archive}.`);
+            callback(archive,"S3");
+        },2000)
+    }
+    else{
+        upload(file,"S3");
+    }
+    
+    
+}
+
+function upload(archive,server){
+    console.log(`${archive} is uploading to ${server}.`);
+    setTimeout(()=>{
+        console.log(`${archive} is uploaded the ${server}.`)
+    },2000)
+
+}
+
+// download('www.somesite.com/imges/image.jpg',(file)=>{
+//     compress(file,(archive, server)=>{
+//         upload(archive,server)
+//     });
+// });
+
+download('www.somesite.com/imges/image.jpg');
 
 
 
