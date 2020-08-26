@@ -643,6 +643,9 @@ function print2(){
 
 //Design a system where user downloads a file, then compress it, and finally
 // uploads the file to the server.
+//Homework -> we can all functions individually
+// -> can skip functions in between by passing callback
+//-> can make them do work automatically.
 
 function download(url,callback){
     console.log(`File is being downloaded from ${url}`);
@@ -679,13 +682,19 @@ function upload(archive,server){
 
 }
 
+//fashion-1
 // download('www.somesite.com/imges/image.jpg',(file)=>{
 //     compress(file,(archive, server)=>{
 //         upload(archive,server)
 //     });
 // });
 
-download('www.somesite.com/imges/image.jpg');
+//fashion-2
+// download('www.somesite.com/imges/image.jpg');
+// compress(file);
+// upload(archive,server);
 
+// fashion-3
+// can skip functions in between
 
 
