@@ -647,18 +647,77 @@ function print2(){
 // -> can skip functions in between by passing callback
 //-> can make them do work automatically.
 
-function download(url,callback){
-    console.log(`File is being downloaded from ${url}`);
-    var file = url.split("/").pop();
-    setTimeout(()=>{
-        console.log(`${file} Downloaded`);
-        if(typeof callback === 'function')
-            callback(file);
-    },2000)
+// function download(url,callback){
+//     console.log(`File is being downloaded from ${url}`);
+//     var file = url.split("/").pop();
+//     setTimeout(()=>{
+//         console.log(`${file} Downloaded`);
+//         if(typeof callback === 'function')
+//             callback(file);
+//     },2000)
 
+// }
+
+// function compress(file,callback){
+//     if(file.split(".")[1]!=="zip"){
+//         console.log(`${file} is compressing.`);
+//         var archive = file.split(".")[0]+".zip";
+//         setTimeout(()=>{
+//             console.log(`${file} is compressed into ${archive}.`);
+//             callback(archive,"S3");
+//         },2000)
+//     }
+//     else{
+//         upload(file,"S3");
+//     }
+    
+    
+// }
+
+// function upload(archive,server){
+//     console.log(`${archive} is uploading to ${server}.`);
+//     setTimeout(()=>{
+//         console.log(`${archive} is uploaded the ${server}.`)
+//     },2000)
+
+// }
+
+//fashion-1
+// download('www.somesite.com/imges/image.jpg',(file)=>{
+//     compress(file,(archive, server)=>{
+//         upload(archive,server)
+//     });
+// });
+
+//fashion-2
+// download('www.somesite.com/imges/image.jpg');
+// compress(file);
+// upload(archive,server);
+
+// fashion-3
+// can skip functions in between
+
+
+
+//Learning Promises
+
+function download(url){
+    return new Promise((resolve,reject)=>{
+        if(url.startsWith("https://")){
+            console.log(`File is being downloaded from ${url}`);
+            var file = url.split("/").pop();
+            setTimeout(()=>{
+                console.log(`${file} Downloaded`);
+                resolve(file);
+            },2000)
+        }
+        else{
+            return reject(new Error("Url doesn't starts with https://"));
+        }
+    });
 }
 
-function compress(file,callback){
+function compress(file){
     if(file.split(".")[1]!=="zip"){
         console.log(`${file} is compressing.`);
         var archive = file.split(".")[0]+".zip";
@@ -682,19 +741,35 @@ function upload(archive,server){
 
 }
 
-//fashion-1
-// download('www.somesite.com/imges/image.jpg',(file)=>{
-//     compress(file,(archive, server)=>{
-//         upload(archive,server)
-//     });
+//PROMISE SYNTAX
+//  return new Promise((resolve, reject)=>{
+//     // if sucessfull
+//     resolve();
+
+
+//     // if fails
+//     return reject();
 // });
 
-//fashion-2
-// download('www.somesite.com/imges/image.jpg');
-// compress(file);
-// upload(archive,server);
+// download("https://www.somesite.com/images/image.jpg").then((file)=>{
+//     compress(file).then((archive)=>{
+//         upload(archive);
+//     },(err)=>{})
+// },(err)=>{
+//     console.log(err);
+// })
 
-// fashion-3
-// can skip functions in between
 
-
+//Better way to write code
+download("www.somesite.com/images/image.jpg")
+.then((file)=>{
+    compress(file)
+    .then((archive)=>{
+        upload(archive)
+        .then((msg)=>{
+            //further code.
+        })
+    })
+}).catch((err)=>{
+    console.log(err);
+})
