@@ -773,3 +773,13 @@ download("www.somesite.com/images/image.jpg")
 }).catch((err)=>{
     console.log(err);
 })
+
+
+
+
+// homework
+// 1) why should we use node js?
+// 2) why shouldn't we use node js?
+// 3) merits and demerits of node js
+// 4) what is routing frameworks? -> express.js, find others too.
+// 5) what is server, diff. b/t application server and web server.
