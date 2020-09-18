@@ -1,12 +1,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var fetch = require("node-fetch");
-const { response } = require('express');
+var Axios = require('axios');
+
+
 
 var app = express();
 var port = 5000;
 
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:true}));
+
 //making routes.
 // static assests -> public -> styles, images and icons, etc.
 // pages -> views
@@ -22,6 +24,8 @@ app.use(bodyParser.urlencoded({extended:true}))
 // when to use SQL Dbs and NOSQL Dbs?
 
 //What is SQL.
+
+// What are different kinds of DBs? -> relations, non-relational, graph Dbs, DO db etc.
 
 app.use(express.static("public")); // to specify to look out static assets in public folder.
 app.set("view engine","ejs"); // view engine is a engine which views/renders the page, you gotta specify which templating engine you are using.
@@ -63,21 +67,23 @@ app.post("/addRecipe",(req,res)=>{
 app.get("/github",(req,res)=>{
   res.render("github");
 })
-app.get("/profile",(req,res)=>{
-  res.render("profile");
+app.get("/profiles",(req,res)=>{
+  res.render("profiles");
 })
 app.post("/search",(req,res)=>{
   var name = req.body.user;
-  fetch("https://api.github.com/search/users?q=divyajeet")
-  .then(res=>{
-    console.log(res.body)
-  }).catch(err=>{
+  Axios.get(`https://api.github.com/search/users?q=${name}`)
+  .then((result)=>{
+    res.render("profiles",{res:result.data})
+ 
+  })
+  .catch((err)=>{
     console.log(err)
   })
-  
-  res.render("profile");
 })
-
+app.post("/profile",(req,res)=>{
+ console.log(req)
+})
 app.listen(port, function(){
     console.log('server running on '+ port);
 })

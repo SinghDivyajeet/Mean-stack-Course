@@ -1,0 +1,64 @@
+<style>
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px auto;
+}
+.person{
+    width: 20%;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px 2px;
+    box-shadow: 0 0 5px 2px #b1aeae;
+}
+.avatar{
+    text-align: center;
+}
+.avatar img{
+    max-width: 100%;
+    object-fit: contain;
+
+}
+</style>
+<h1>Total Profiles: <%=res.total_count%></h1>
+<button id="btn">CLick me</button>
+<div class="container">
+    <%res.items.forEach((person)=>{%>
+        <div class="person" id="<%=person.login%>">
+            <div class="avatar">
+                <img src="<%=person.avatar_url%>" alt="<%=person.login%>">
+            </div>
+            <div class="details">
+                <h3>
+                    <%=person.login%>
+                    <!-- <a href="profile" id="<%=person.login%>">Profile</a> -->
+                </h3>
+            </div>   
+        </div>
+    <%})%>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".person").click(function(){
+            let payload ={
+                user:this.id
+            };
+            $.ajax({
+                type:"POST",
+                data:payload,
+                contentType:'application/json',
+                url:'http://localhost:5000/profile',
+                success: function(data) {
+                            console.log('success');
+                            console.log(JSON.stringify(data));
+                        }
+            });
+        })
+        
+    })
+    
+</script>
