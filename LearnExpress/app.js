@@ -59,7 +59,7 @@ app.get("/dogs/:breed",(req,res)=>{
 app.post("/addRecipe",(req,res)=>{
   var obj = {
             name:req.body.recipeName,
-            imgUrl:"",
+            imgUrl:req.body.file,
             };
   recipes.push(obj);
   res.redirect("/recipes");
@@ -87,6 +87,7 @@ app.post("/profile",(req,res)=>{
 app.listen(port, function(){
     console.log('server running on '+ port);
 })
+
 
 
 
