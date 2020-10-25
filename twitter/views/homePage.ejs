@@ -1,0 +1,9 @@
+<div class="container">
+    <% for(var i in data) {%>
+        <div class="tweets" style="border: 2px solid black; margin-top: 10px;">
+            <h1> <%= data[i]["username"] %></h1>
+            <p> <%= data[i]["tweet"] %></p>
+            <p> <%= data[i]["time"] %></p>
+        </div>    
+    <% } %>
+</div>

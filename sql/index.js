@@ -29,7 +29,7 @@ var jsonData = {
     name: "vikas",
     age:54
 }
-var query3 = 'insert into empDetails set ?';
+var query3 = `insert into empDetails set ${jsonData}`;
 
 // db.query(query3,jsonData,(err,results)=>{
 //     if(err)
